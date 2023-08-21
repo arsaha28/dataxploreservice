@@ -6,5 +6,5 @@ export GOOGLE_APPLICATION_CREDENTIALS="/Users/<<user>>/Downloads/<<file.json>>"
 # Run postgraphile
 npx postgraphile -c postgres://localhost/<<user>> --schema <<schema>> --enhance-graphiql
 
-#start
+# Start the app
 streamlit run home.py
