@@ -7,7 +7,7 @@ from langchain.llms import VertexAI
 from langchain.embeddings import VertexAIEmbeddings
 from langchain.vectorstores.pgvector import PGVector
 
-
+#Add a location where PDF is available
 loader = PyPDFLoader("/Users/arnabsaha/projectai/help.pdf")
 documents = loader.load()
 llm = VertexAI(temparature=0.7)

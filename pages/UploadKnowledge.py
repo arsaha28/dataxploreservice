@@ -28,6 +28,7 @@ CONNECTION_STRING = PGVector.connection_string_from_db_params(
 
 
 if uploaded_file is not None:
+    #Add a location where PDF will be temporarily uploaded
     save_folder = '/Users/arnabsaha/projectai/upload/'
     save_path = Path(save_folder, uploaded_file.name)
     with open(save_path, mode='wb') as w:
