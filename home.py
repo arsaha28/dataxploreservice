@@ -20,13 +20,7 @@ CONNECTION_STRING = PGVector.connection_string_from_db_params(
      user="arnabsaha",
      password='',
  )
-#db = PGVector.from_documents(
-#    embedding=embeddings,
-#    documents=docs,
-#    collection_name=COLLECTION_NAME,
-#    connection_string=CONNECTION_STRING,
-#    pre_delete_collection=True
-#)
+
     
 store = PGVector(
     collection_name=COLLECTION_NAME,
