@@ -9,9 +9,6 @@ llm = VertexAI(temparature=0)
 from PIL import Image
 from streamlit_chat import message
 
-image = Image.open('abhishkar.png')
-new_image = image.resize((160, 65))
-#st.image(new_image)
 st.title("DXPloreService")
 
 tools = load_tools(

@@ -6,20 +6,8 @@ from langchain.chains import RetrievalQA
 from langchain.llms import VertexAI
 from PIL import Image
 
-
-image = Image.open('abhishkar.png')
-new_image = image.resize((160, 65))
-
-#st.image(new_image)
 st.title("DataExploreService")
 
-#st.title('Abhishakar.AI')
-#loader = TextLoader("/Users/arnabsaha/projectai/help.txt")
-#documents = loader.load()
-#text_splitter = CharacterTextSplitter(chunk_size=1000, chunk_overlap=0)
-#docs = text_splitter.split_documents(documents)
-#print(docs)
-#model = TextEmbeddingModel.from_pretrained("textembedding-gecko@001")
 embeddings = VertexAIEmbeddings()
 llm = VertexAI()
 

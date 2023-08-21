@@ -1,3 +1,4 @@
+#use pg db as knowledge store without graphql
 import os 
 import streamlit as st 
 
@@ -10,11 +11,7 @@ from langchain.llms import VertexAI
 from PIL import Image
 from streamlit_chat import message
 
-image = Image.open('logo1.png')
-new_image = image.resize((75, 50))
-
-st.image(new_image)
-st.title('LBG GPT')
+st.title('DXPloreService')
 prompt = st.text_input('Search your transactions') 
 
 # Setup database

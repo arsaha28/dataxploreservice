@@ -1,3 +1,4 @@
+#Upload a PDF to vector db and perform a search
 from langchain.document_loaders import PyPDFLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.vectorstores import Chroma
@@ -16,7 +17,7 @@ docs = text_splitter.split_documents(documents)
 print(f"# of documents = {len(docs)}")
 
 embeddings = VertexAIEmbeddings()
-#db = Chroma.from_documents(docs, embeddings)
+
 COLLECTION_NAME = "soe12.help_topics"
 CONNECTION_STRING = PGVector.connection_string_from_db_params(
      driver="psycopg2",
@@ -39,6 +40,6 @@ qa = RetrievalQA.from_chain_type(
     llm= llm, chain_type="stuff", retriever=retriever
 )
 
-query = "What my transaction was declined?"
+query = "Why my transaction was declined?"
 result = qa.run(query)
 print(result)

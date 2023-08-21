@@ -7,11 +7,8 @@ from streamlit_chat import message
 from PIL import Image
 
 llm = VertexAI(temparature=0)
-image = Image.open('abhishkar.png')
-new_image = image.resize((160, 65))
 st.title("DXPloreService")
 
-#st.image(new_image)
 tools = load_tools(
     ["graphql"],
     graphql_endpoint="http://localhost:5000/graphql",
